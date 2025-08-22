@@ -60,9 +60,16 @@ dependencies:
 
 ---
 
+## 🧪 Preparing the Dataset
+
+Download the ABIDE dataset from [here](https://drive.google.com/file/d/14UGsikYH_SQ-d_GvY2Um2oEHw3WNxDY3/view?usp=sharing).
+**After downloading, place the dataset in `source/dataset/` as `abide.npy`.**
+
+---
+
 ## 🧪 Running the Model
 
-Once the environment is ready, you can run the model using:
+Once the environment is ready and the dataset is in place, you can run the model using:
 
 ```bash
 python -m source --multirun datasz=100p model=ASDFormer dataset=ABIDE repeat_time=5 preprocess=non_mixup
@@ -83,14 +90,11 @@ Our code was inspired by and builds upon the following projects:
 * [Graphormer — Hugging Face Transformers](https://huggingface.co/docs/transformers/main/en/model_doc/graphormer)
 * [BrainNetworkTransformer — GitHub](https://github.com/Wayfear/BrainNetworkTransformer)
 
-The ABIDE dataset used in this study can be downloaded from [here](https://drive.google.com/file/d/14UGsikYH_SQ-d_GvY2Um2oEHw3WNxDY3/view?usp=sharing).
-
 ---
 
 ## 📖 Notes
 
 * For GPU acceleration, ensure your machine has CUDA 11.3 drivers installed.
-* If you encounter conflicts, try removing the pinned `cudatoolkit` from `environment.yml` and let Conda auto-resolve.
 * Logs and experiment tracking are managed through [Weights & Biases (wandb)](https://wandb.ai/).
 
 ---
